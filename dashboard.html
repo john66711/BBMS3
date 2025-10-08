@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blood Bank Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="navbar">
+  <h2>Blood Bank Dashboard</h2>
+  <button onclick="logout()">Logout</button>
+</div>
+
+<div class="dashboard">
+  <section>
+    <h3>Blood Stock</h3>
+    <table id="bloodStockTable">
+      <thead>
+        <tr>
+          <th>Blood Type</th>
+          <th>Units Available</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="showAddBlood()">Add Blood Type</button>
+  </section>
+
+  <section>
+    <h3>Donors</h3>
+    <table id="donorsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Blood Type</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="showAddDonor()">Add Donor</button>
+  </section>
+</div>
+
+<!-- Modal for adding blood -->
+<div id="bloodModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Add Blood Type</h3>
+    <input type="text" id="bloodTypeInput" placeholder="Blood Type (e.g., A+)" />
+    <input type="number" id="bloodUnitsInput" placeholder="Units" />
+    <button onclick="addBlood()">Add</button>
+    <button onclick="closeModal('bloodModal')">Cancel</button>
+  </div>
+</div>
+
+<!-- Modal for adding donor -->
+<div id="donorModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Add Donor</h3>
+    <input type="text" id="donorName" placeholder="Name" />
+    <input type="text" id="donorBloodType" placeholder="Blood Type" />
+    <input type="text" id="donorContact" placeholder="Contact Info" />
+    <button onclick="addDonor()">Add</button>
+    <button onclick="closeModal('donorModal')">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

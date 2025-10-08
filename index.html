@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blood Bank Management System</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+  <h1>Blood Bank Management System</h1>
+  <div class="auth-box">
+    <div class="tabs">
+      <button id="loginTab" class="tab active" onclick="showLogin()">Login</button>
+      <button id="registerTab" class="tab" onclick="showRegister()">Register</button>
+    </div>
+    <div id="loginForm" class="form">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button onclick="login()">Login</button>
+    </div>
+    <div id="registerForm" class="form hidden">
+      <h2>Register</h2>
+      <input type="text" id="regUsername" placeholder="Username" required />
+      <input type="password" id="regPassword" placeholder="Password" required />
+      <button onclick="register()">Register</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
